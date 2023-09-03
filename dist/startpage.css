@@ -1,0 +1,49 @@
+.body-light {
+    background-color: #ffffff;
+}
+.body-dark {
+    background-color: #35363a;
+}
+.overmain {
+    height: 75px;
+}
+.main {
+    text-align: center;
+    color: #68e8bd;
+}
+.clickarea-light {
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: inherit;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.clickarea-light:hover {
+    background-color: #e8e8e8;
+}
+.clickarea-dark {
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: inherit;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.clickarea-dark:hover {
+    background-color: #606060;
+}
+button {
+    color: #ffffff;
+    background-color: #68e8bd;
+    border: 3px solid #68e8bd;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #48c89d;
+    border: 3px solid #48c89d;
+}

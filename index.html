@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title id="page-header">Heyc's Startpage</title>
+        <link rel="stylesheet" href="./dist/startpage.css">
+        <link rel="stylesheet" href="./dist/search.css">
+        <link rel="stylesheet" href="./dist/linkto.css">
+        <script src="./dist/search.js"></script>
+        <script src="./dist/cookies.js"></script>
+        <script src="./dist/startpage-settings.js"></script>
+        <script src="./dist/startpage-customize.js"></script>
+    </head>
+    <body>
+        <div class="overmain" id="over-main">
+            <a href="./settings.html">
+                <div class="clickarea-light" id="click">
+                    <img src="./img/settings-black.png" id="click-icon" height="30px" width="30px" style="margin: 10px">
+                </div>
+            </a>
+        </div>
+        <div class="main" id="main">
+            <p><h1 id="main-header">Heyc's Startpage</h1></p>
+            <br>
+            <div class="search" id="search">
+                <input class="searchbox" id="search-box" type="text" oninput="searchtext_change()">
+                <button class="searchbutton" id="search-button" onclick="redirect()"><b>Go!</b></button>
+                <p>
+                    搜索引擎：
+                    <select id="select-engine" onchange="searchengine_change()">
+                        <option value="baidu" selected>百度</option>
+                        <option value="bing">必应</option>
+                        <option value="fsou">F 搜</option>
+                        <option value="moegirls">萌娘百科</option>
+                        <option value="bdtranslate">百度翻译</option>
+                    </select>
+                </p>
+            </div>
+            <br><br><br>
+            <div class="links" id="links"></div>
+        </div>
+        <script type="text/javascript">
+            engine_upd();
+            links_read();
+            links_load_display();
+            title_read();
+            title_load_display();
+            theme_upd_display();
+        </script>
+        <link rel="stylesheet" type="text/css" href="/live2d/waifu.css">
+        <div class="waifu" id="waifu" style="z-index: -1;">
+            <div class="waifu-tips"></div>
+            <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        </div>
+        <script src="/live2d/live2d.js"></script>
+        <script src="/live2d/waifu-tips.js"></script>
+        <script type="text/javascript">initModel()</script>
+    </body>
+</html>

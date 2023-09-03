@@ -1,0 +1,34 @@
+a {
+    text-decoration: none;
+    color: #5e72e4;
+}
+.links {
+    display: block;
+}
+.linkto-light {
+    height: 70px;
+    width: 10%;
+    border-radius: 5px;
+    background-color: inherit;
+    text-align: center;
+    float: left;
+}
+.linkto-light:hover {
+    background-color: #e8e8e8;
+}
+.linkto-dark {
+    height: 70px;
+    width: 10%;
+    border-radius: 5px;
+    background-color: inherit;
+    text-align: center;
+    float: left;
+}
+.linkto-dark:hover {
+    background-color: #606060;
+}
+.linkto-img {
+    height: 30px;
+    display: block;
+    border-radius: 3px;
+}

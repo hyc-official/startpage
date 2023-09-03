@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Heyc's Startpage 设置</title>
+        <link rel="stylesheet" href="./dist/startpage.css">
+        <link rel="stylesheet" href="./dist/startpage-settings.css">
+        <script src="./dist/cookies.js"></script>
+        <script src="./dist/startpage-settings.js"></script>
+        <script src="./dist/startpage-customize.js"></script>
+    </head>
+    <body>
+        <a href="./startpage/index.html">
+            <div class="clickarea-light" id="click">
+                <img src="./img/cross-black.png" id="click-icon" height="30px" width="30px" style="margin: 10px">
+            </div>
+        </a>
+        <div class="main2" id="main2">
+            <center><h1>Heyc's Startpage 设置</h1></center>
+            <div class="box">
+                <h3><img src="./img/info.png" height="20px" width="20px"> 提示</h3>
+                <div class="inbox">
+                    <p>我们使用 Cookies 保存设置，在此页点击 保存设置 按钮则表示您同意 Cookies 的使用。</p>
+                </div>
+            </div>
+            <div id="settings">
+                <br>
+                <div class="box">
+                    <h3>常规设置</h3>
+                    <div class="inbox">
+                        <p><label><input type="checkbox" id="darkmode" name="darkmode">夜间模式</label></p>
+                        <p>
+                            默认搜索引擎：
+                            <select id="default-engine">
+                                <option value="baidu" selected>百度</option>
+                                <option value="bing">必应</option>
+                                <option value="fsou">F 搜</option>
+                                <option value="moegirls">萌娘百科</option>
+                                <option value="bdtranslate">百度翻译</option>
+                            </select>
+                        </p>
+                        <p>自定义标题：<input type="text" id="title" placeholder="Heyc's Startpage"></p>
+                    </div>
+                </div>
+                <br>
+                <div class="box">
+                    <h3>添加链接</h3>
+                    <div class="inbox">
+                        <p><img src="./img/info.png" height="15px" width="15px"> 提示：一行显示 10 个链接，请注意排版。</p>
+                        <p>显示文字：<input type="text" id="newlink-name"></p>
+                        <p>目标链接：<input type="text" id="newlink-to" oninput="links_urlchanged()"></p>
+                        <p>显示图标：<input type="text" id="newlink-icon"></p>
+                    </div>
+                    <center><button id="add" onclick="links_add()">添加链接</button></center>
+                </div>
+                <br>
+                <div class="box">
+                    <h3>管理链接</h3>
+                    <div class="inbox" id="links">
+                    </div>
+                    <center><button id="del" onclick="links_del()">删除选中</button> <button id="dft" onclick="links_dft()">恢复默认</button></center>
+                </div>
+            </div>
+            <br>
+            <center><button id="save" onclick="settings_save()">保存设置</button></center>
+            <br>
+        </div>
+        <script type="text/javascript">
+            settings_load();
+            links_read();
+            links_load_settings();
+            title_read();
+            title_load_settings();
+            theme_upd_settings();
+        </script>
+    </body>
+</html>

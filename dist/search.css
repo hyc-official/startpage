@@ -1,0 +1,26 @@
+.search {
+    display: block;
+}
+.searchbox {
+    height: 30px;
+    width: 700px;
+    border: 3px solid #68e8bd;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.searchbutton {
+    height: 30px;
+    width: 70px;
+    /* background-color: #68e8bd;
+    border: 3px solid #68e8bd;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; */
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+/* .searchbutton:hover {
+    background-color: #48c89d;
+    border: 3px solid #48c89d;
+} */
